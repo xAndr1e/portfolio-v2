@@ -20,7 +20,7 @@ export default function Home() {
 
     return (
         <>
-            <div className="home w-full h-168 flex items-center flex-col border-b-1 border-white">
+            <div className="home w-full h-168 flex items-center flex-col border-b border-white relative">
                 <div className={`h-48 flex items-center justify-content-center space-x-6 ${fadeUp('delay-0')}`}>
                     <div className="transition-transform duration-300 hover:scale-105">
                         <Image className='rounded-full border-2 border-white w-24 h-24' src={Profile} alt="Profile" />
@@ -50,6 +50,20 @@ export default function Home() {
                     <p className="font-bold text-xl text-blue-500 mt-4 cursor-pointer transition-all duration-300 hover:text-blue-400 hover:tracking-wide hover:scale-105">
                         Download CV
                     </p>
+                </div>
+
+                {/* Scroll indicator */}
+                <div className={`absolute bottom-8 flex flex-col items-center gap-2 ${fadeUp('delay-700')}`}>
+                    <span className="text-white/40 text-xs font-semibold uppercase tracking-widest">Scroll</span>
+                    <div className="w-[1px] h-8 bg-gradient-to-b from-white/40 to-transparent animate-pulse" />
+                    <svg
+                        className="w-4 h-4 text-white/40 animate-bounce"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
                 </div>
             </div>
         </>
