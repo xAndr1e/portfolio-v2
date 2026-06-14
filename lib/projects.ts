@@ -1,0 +1,46 @@
+
+
+export const projects = [
+    {
+        slug: "coffee-dev",
+        title: "Coffee.Dev",
+        subtitle: "A coffee-themed development blog built for makers and caffeine lovers.",
+        description: "A full-stack development blog with a coffee aesthetic. Features authentication, blog posts, and a clean reading experience.",
+        image: "/projects/Coffee-Dev.png",
+        liveUrl: "https://coffee-dev-rho.vercel.app/",
+        githubUrl: "https://github.com/xAndr1e/coffee-dev",
+        techs: ["Next.js", "Tailwind CSS", "Supabase", "Vercel"],
+    },
+    {
+        slug: "project-2",
+        title: "Project 2",
+        subtitle: "A simple todo app.",
+        description: "A clean and minimal todo application with real-time updates.",
+        image: "/projects/project2.jpg",
+        liveUrl: "#",
+        githubUrl: "#",
+        techs: ["Vue", "Firebase"],
+    },
+    {
+        slug: "project-3",
+        title: "Project 3",
+        subtitle: "A social media platform.",
+        description: "A social media platform with posts, likes, and comments.",
+        image: "/projects/project3.jpg",
+        liveUrl: "#",
+        githubUrl: "#",
+        techs: ["Next.js", "PostgreSQL"],
+    },
+    {
+        slug: "project-4",
+        title: "Project 4",
+        subtitle: "An e-commerce website.",
+        description: "A full e-commerce platform with cart, checkout, and payment integration.",
+        image: "/projects/project4.jpg",
+        liveUrl: "#",
+        githubUrl: "#",
+        techs: ["React", "Node.js", "MongoDB"],
+    },
+];
+
+export type Project = typeof projects[0];

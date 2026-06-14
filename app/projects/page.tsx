@@ -1,12 +1,15 @@
+import Project from "@/sections/Project";
 import Navbar from "@/components/Navbar";
+import Footer from "@/sections/Footer";
+
+
 
 export default function Page() {
   return (
-    <>
+  <>
     <Navbar />
-    <div className="w-full flex items-center justify-center flex-col">
-        <h1 className="text-4xl font-bold text-white mt-12">Projects</h1>
-    </div>
-    </>
+    <Project/>
+    <Footer />
+  </>
   );
 }

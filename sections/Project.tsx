@@ -1,14 +1,8 @@
 "use client";
 
 import ProjectCards from "@/components/ProjectCards";
+import { projects } from "@/lib/projects";
 import { useEffect, useRef, useState } from "react";
-
-const projects = [
-    { image: "/projects/Coffee-Dev.png", title: "Coffee.Dev", description: "A coffee-themed development blog.", techs: ["Next.js", "Tailwind CSS", "Supabase", "Vercel"] },
-    { image: "/projects/project2.jpg", title: "Project 2", description: "A simple todo app.", techs: ["Vue", "Firebase"] },
-    { image: "/projects/project3.jpg", title: "Project 3", description: "A social media platform.", techs: ["Next.js", "PostgreSQL"] },
-    { image: "/projects/project4.jpg", title: "Project 4", description: "An e-commerce website.", techs: ["React", "Node.js", "MongoDB"] },
-];
 
 export default function Project() {
     const [visible, setVisible] = useState(false);
@@ -32,7 +26,10 @@ export default function Project() {
             >
                 Projects
             </h1>
-            <div className="w-8xl h-auto mt-8 grid grid-cols-2 gap-6 px-8">
+            <p className="text-lg font-bold text-gray-400 mt-6 max-w-2xl leading-relaxed">
+                Here are some of my recent projects.
+            </p>
+            <div className="w-8xl h-auto mt-8 mb-12 grid grid-cols-2 gap-6 px-8">
                 {projects.map((project, i) => (
                     <div
                         key={project.title}
