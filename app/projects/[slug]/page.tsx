@@ -35,7 +35,7 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
                 <h1 className={`font-bold text-6xl text-white uppercase tracking-tight ${fadeUp("delay-0")}`}>
                     {project.title}
                 </h1>
-                <p className={`text-white/50 text-lg mt-4 max-w-xl ${fadeUp("delay-150")}`}>
+                <p className={`text-white/50 text-lg font-bold mt-4 max-w-xl ${fadeUp("delay-150")}`}>
                     {project.subtitle}
                 </p>
                 <div className={`mt-8 animate-bounce text-white/30 ${fadeUp("delay-300")}`}>
