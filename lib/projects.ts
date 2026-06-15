@@ -26,7 +26,7 @@ export const projects = [
         title: "My Portfolio",
         subtitle: "A personal portfolio website.",
         description: "A modern portfolio website to showcase my work and skills.",
-        image: "/projects/my-portfolio.png",
+        image: "/projects/My-Portfolio.png",
         liveUrl: "https://andrie-elbambuena.vercel.app",
         githubUrl: "https://github.com/xAndr1e/portfolio-v2",
         techs: ["Next.js", "Tailwind CSS", "Vercel"],
