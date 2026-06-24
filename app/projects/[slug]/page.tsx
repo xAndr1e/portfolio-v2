@@ -61,9 +61,15 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
                             ))}
                         </div>
                         <div className="flex gap-3 mt-6">
-                            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-full bg-white text-black text-sm font-bold hover:bg-gray-200 transition-colors">
-                                View Demo
+                            {project.liveUrl ? (
+                            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-full border border-white text-white text-sm font-bold hover:bg-white/10 transition-colors">
+                                Live Demo
                             </a>
+                            ) : (
+                            <span className="text-sm font-bold text-white border border-zinc-700 rounded-full px-4 py-2">
+                                No Live Demo
+                            </span>
+                            )}
                             <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-full border border-white/30 text-white text-sm font-bold hover:bg-white/10 transition-colors">
                                 Source Code
                             </a>
