@@ -32,7 +32,7 @@ export const projects = [
     },
     {
         slug: "sms",
-        title: "Student Management System",
+        title: "School Management System",
         subtitle: "A system for managing student information and records.",
         description: "A comprehensive student management system with features for enrollment, grades, and communication.",
         image: "/projects/SMS.png",
