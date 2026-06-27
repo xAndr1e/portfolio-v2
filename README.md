@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio v2 — Andrie Elbambuena
+
+A personal portfolio website built to showcase projects and work, featuring a dark-themed aesthetic with smooth scroll-triggered animations.
+
+## Tech Stack
+
+- **Framework:** [Next.js](https://nextjs.org/) (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **UI:** React with TSX components
+
+## Features
+
+- Dark/black theme throughout all pages and components
+- Scroll-triggered fade-up entrance animations via `IntersectionObserver`
+- Hover micro-interactions (scale, translate, color transitions, sliding underlines)
+- Frosted glass sticky navbar with centered pill-shaped design
+- Dynamic project detail pages via Next.js `[slug]` routing
+- Conditional "No Live Demo" badge for projects without a live URL
+- Centralized project data in `lib/projects.ts`
+
+## Project Structure
+
+```
+├── app/
+│   ├── layout.tsx          # Global metadata, favicon
+│   ├── page.tsx            # Home page
+│   └── projects/
+│       └── [slug]/         # Dynamic project detail pages
+├── components/
+│   ├── Navbar.tsx
+│   ├── Hero.tsx
+│   ├── About.tsx           # Tech stack section
+│   ├── Projects.tsx
+│   └── Footer.tsx
+├── lib/
+│   └── projects.ts         # Centralized project data & Project type
+└── declarations.d.ts       # PNG/image module declarations
+```
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Adding a Project
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Edit `lib/projects.ts` and add a new entry to the projects array:
 
-## Learn More
+```ts
+{
+  slug: "my-project",
+  title: "My Project",
+  description: "A short description.",
+  tags: ["Next.js", "TypeScript"],
+  image: myProjectImage,
+  liveUrl: "https://example.com", // optional — omit to show "No Live Demo" badge
+  repoUrl: "https://github.com/you/my-project",
+}
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Notes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `params` in dynamic routes must be unwrapped with `React.use()` and typed as `Promise<{ slug: string }>` (Next.js App Router requirement)
+- Hooks must be called before any conditional `notFound()` returns
+- PNG imports require `declarations.d.ts` with a module declaration
