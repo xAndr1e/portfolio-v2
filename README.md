@@ -48,7 +48,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the site.
+Open andrie-elbambuena.vercel.app to view the site.
 
 ## Adding a Project
 
