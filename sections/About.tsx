@@ -26,7 +26,6 @@ export default function About() {
         { name: "JavaScript",  icon: "/icons/javascript.png" },
         { name: "TypeScript",  icon: "/icons/typescript.png" },
         { name: "PHP",         icon: "/icons/php.png" },
-        { name: "Laravel",     icon: "/icons/laravel.png" },
         { name: "MySQL",       icon: "/icons/mysql.png" },
         { name: "Git",         icon: "/icons/git.png" },
         { name: "Tailwind CSS",icon: "/icons/tailwind.png" },

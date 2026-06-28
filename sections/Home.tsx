@@ -47,9 +47,13 @@ export default function Home() {
                 </div>
 
                 <div className={`flex items-center mt-4 ${fadeUp('delay-500')}`}>
-                    <p className="font-bold text-xl text-blue-500 mt-4 cursor-pointer transition-all duration-300 hover:text-blue-400 hover:tracking-wide hover:scale-105">
+                    <a 
+                        href="/resume.pdf" 
+                        download="Resume of Andrie S. Elbambuena.pdf"
+                        className="font-bold text-xl text-blue-500 mt-4 cursor-pointer transition-all duration-300 hover:text-blue-400 hover:tracking-wide hover:scale-105"
+                    >
                         Download CV
-                    </p>
+                    </a>
                 </div>
 
                 {/* Scroll indicator */}
